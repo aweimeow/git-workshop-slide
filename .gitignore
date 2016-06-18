@@ -4,3 +4,6 @@ index.html
 
 # log
 *.log
+
+#deploy script
+deploy.py
