@@ -548,7 +548,18 @@
 
 	<section class="slide">
 		<h2>Difference between reset and rm</h2>
-		
+		<h4>有三個地方有檔案：working directory, index, tree</h4>
+		<br>
+		<img src="pictures/git_stage.png" style="display: block; margin: 0 auto; width: 500px; "/>
+	</section>
+
+	<section class="slide">
+		<h2>Difference between reset and rm</h2>
+		<h4><code>git rm</code> 把檔案從 staging area 與 working dir 移除</h4>
+		<h4><code>git reset</code> 把檔案從 staging area 移除</h4>
+		<h5>　也就是說，可以用來復原 <code>git add [file]</code> 的動作</h5>
+		<br><br>
+		<h4 style="color:red;"><code>關於 git 的原理下次的 workshop 才會提</code></h4>
 	</section>
 
 	<section class="slide practice">
