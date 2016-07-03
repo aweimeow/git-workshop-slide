@@ -44,6 +44,23 @@
 			text-shadow: 0px 0px 5px #000;
         }
 
+        section.practice h6 {
+			margin:0px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:20px;
+			text-shadow: 0px 0px 5px #000;
+        }
+
+        section.practice a {
+        	color:#FFF;
+        	text-decoration: none;
+        	background: none;
+        }
+        section.practice a:hover {
+        	color:#fdd835;
+        }
+
         section.hint {
         	background-image: url("pictures/hint.jpeg");
         }
@@ -603,7 +620,33 @@
 	<p class="note"># 查看目前的 remote branch</p>
 	</section>
 
+	<section class="slide practice">
+		<h2>Practice - 6</h2>
+		<h4>fork from git-workshop-example</h4>
+		<h6><a href="https://github.com/aweimeow/git-workshop-example">https://github.com/aweimeow/git-workshop-example</a></h6>
+	</section>
 	
+	<section class="slide">
+		<h2>Practice 6 流程說明</h2>
+		<h4>
+		<ol>
+			<li>找好你的夥伴，兩人一組協力完成題目</li>
+			<li>由 A 來 fork 這個專案，並把 B 加入專案擁有者</li>
+			<li>A 與 B 分別從 github pull 下來</li>
+			<li>A 先 commit 過後 push 到 remote branch</li>
+			<li>B 在 pull 之前先 push 看看（這時會需要解衝突）</li>
+		</ol>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/conflict.jpg" style="width: 600px; height: 463px; margin: 0 auto; display: block;"/>
+	</section>
+
+	<section class="slide talk">
+		<h2>Live Demo</h2>
+	</section>
+
 
 	<!--
 		To hide progress bar from entire presentation
