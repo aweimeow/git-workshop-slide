@@ -631,6 +631,16 @@
 		<h4>新增一個 remote branch</h4>
 	</section>
 
+	<section class="slide command">
+		<h2>git pull</h2>
+		<h4>把資料從遠端拉下並試著合併</h4>
+	</section>
+
+	<section class="slide command">
+		<h2>git push [name] [branch]</h2>
+		<h4>把資料推到遠端更新上去</h4>
+	</section>
+
 	<section class="slide">
 	<h2>remote</h2>
 	<h4>add remote branch example</h4>
@@ -656,6 +666,7 @@
 			<li>A 與 B 分別從 github pull 下來</li>
 			<li>A 先 commit 過後 push 到 remote branch</li>
 			<li>B 在 pull 之前先 push 看看（這時會需要解衝突）</li>
+			<li>B 解衝突 pull 後再換 A push （換 A 解衝突）</li>
 		</ol>
 		</h4>
 	</section>
@@ -762,9 +773,35 @@
 	</section>
 
 	<section class="slide">
+		<img src="pictures/github-branch.jpg" class="center"/>
+	</section>
+
+	<section class="slide">
 		<img src="pictures/github-del-branch.jpg" class="center"/>
 	</section>
 
+	<section class="slide talk">
+		<h2>我的隊友太雷了<br>到底是誰改壞功能的？</h2>
+		<h4><u>隆重介紹抓戰犯指令</u></h4>
+	</section>
+
+	<section class="slide command">
+		<h2>git blame [filename]</h2>
+		<h4>Show what revision and author last modified each line of a file</h4>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/git-blame.jpg" class="center"/>
+	</section>
+
+	<section class="slide hint">
+		<h2>Colorful git blame</h2>
+		<h4><a href="https://github.com/nene/config/blob/master/bin/git-praise">git-praise</a></h4>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/git-praise.jpg" class="center"/>
+	</section>
 
 	<!--
 		To hide progress bar from entire presentation
