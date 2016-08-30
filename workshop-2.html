@@ -196,7 +196,49 @@
 		</ul>
 	</section>
 
+	<section class="slide talk">
+		<h2>GIT 原理運作</h2>
+	</section>
 
+	<section class="slide">
+		<h2>git init</h2>
+		<h4>
+			當我們執行 <code>git init</code> ...
+			<ul>
+			<ul>
+				<li>會有一個 <code>.git</code> 資料夾</li>
+				<li>資料夾中有：<font style="font-size: 28px"><code>HEAD</code>、<code>index</code>、<code>objects</code>、<code>refs</code></font></li>
+					<ul style="font-size: 28px; line-height: 48px;">
+						<li>HEAD: 指向目前分支</li>
+						<li>index: 暫存區資訊</li>
+						<li>objects: 所有資料都在這</li>
+						<li>ref: 提交物件的指標</li>
+					</ul>
+			</ul>
+			</ul>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<h2>objects</h2>
+		<pre style="background-color: #EEE"><code>$ echo 'test content' | git hash-object -w --stdin
+d670460b4b4aece5915caf5c68d12f560a9fe3e4
+$ tree .git/objects
+.git/objects
+├── d6
+│   └── 70460b4b4aece5915caf5c68d12f560a9fe3e4
+├── info
+└── pack</code></pre>
+	</section>
+
+	<section class="slide">
+		<h2>Reference</h2>
+		<ul>
+			<li><a href="http://denny.one/HackGen-2014-workshop/">Git Workshop - Denny Huang</a></li>
+			<li><a href="https://speakerdeck.com/crboy/code-smart-dont-code-hard">Code Smart, Don't Code hard - CrBoy</a></li>
+			<li><a href="https://git-scm.com/book/zh-tw">Git Book</a></li>
+		</ul>
+	</section>
 
 	<!--
 		To hide progress bar from entire presentation
