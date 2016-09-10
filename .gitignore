@@ -2,8 +2,4 @@
 # Template page
 index.html
 
-# log
-*.log
-
-#deploy script
-deploy.py
+notupload-*.jpg
