@@ -149,6 +149,7 @@
 
         section.magic {
         	background-image: url('pictures/notupload-magic.jpg');
+        	background-size: 100% 100%;
         }
 
         section.magic h2 {
@@ -322,7 +323,8 @@ $ tree .git/objects
 
 	<section class="slide">
 		<h2>Markdown Syntax: 最常用到的幾種</h2>
-		<pre style="background-color: #EEE; font-size: 20px"><code># h1
+		<pre style="background-color: #EEE; font-size: 20px">
+		<code># h1
 ## h2
 #### h4
 - List 1 ( 也可以用 * 開頭)
@@ -336,6 +338,46 @@ print "HelloWorld"
 
 	<section class="slide">
 		<img src="pictures/markdown-demo.jpg" alt="" class="cover">
+	</section>
+
+	<section class="slide practice">
+		<h2>Practice - 1</h2>
+		<h4>Write README.md for repo and publish to Github</h4>
+	</section>
+
+	<section class="slide magic">
+		<h2>.gitconfig</h2>
+		<h4><a href="https://git-scm.com/book/zh-tw/v1/開始-初次設定Git">gitconfig - 初次設定Git</a></h4>
+	</section>
+
+	<section class="slide">
+		<img src="pictures/gitconfig.jpg" class="center"/>
+	</section>
+
+	<section class="slide">
+		<h2>我剛剛看了什麼 (ﾟдﾟ≡ﾟдﾟ)</h2>
+		<h4>
+			<ul>
+				<li>user: 告訴 git 你是誰 (Name, email)</li>
+				<li>core: 關於 git 的一些相關預設配置
+					<ul style="font-size: 24px">
+						<li><code>whitespace = cr-at-eol</code> Windows and Unix's newline format</li>
+						<li><code>quotepath: off</code> 禁止 git 把中文檔名轉義 (demo-3.json)</li>
+					</ul>
+				</li>
+				<li>alias: 把常用的指令寫成縮寫</li>
+			</ul>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<h2>git lg</h2>
+		<pre style="background-color: #EEE; font-size: 20px">
+		<code>git config --global alias.lg \
+"log --color --graph --all --pretty=format:\
+'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)\
+ %C(bold blue)<%an>%Creset' --abbrev-commit --"</code></pre>
+ 		<img src="pictures/git-lg.jpg" style="width: 100%"/>
 	</section>
 
 	<section class="slide">
