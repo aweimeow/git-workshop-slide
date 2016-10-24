@@ -219,7 +219,7 @@
 		<h2>git workshop - 2</h2>
         <br><br><br><br><br><br><br>
         <p>陳威祐</p>
-        <p>2016 / 08 / 31</a></p>
+        <p>2016 / 10 / 24</a></p>
 
 		<img src="pictures/coffee-apple-iphone-laptop.jpg" alt="" class="cover">
 		<!--
@@ -524,6 +524,134 @@ The key fingerprint is:
 		<img src="pictures/pass-upload-to-github.jpg" class="center"/>
 	</section>
 
+	<section class="slide hint">
+		<h2>BFG Repo-Cleaner</h2>
+		<h4><a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG Repo-Cleaner</a></h4>
+	</section>
+
+	<section class="slide">
+		<h2>BFG Repo-Cleaner</h2>
+		<h4>
+			<ul>
+				<li>移除太大的檔案（超過 10MBytes）</li>
+				<li>移除密碼（像我們這個例子）</li>
+				<li>移除憑證、金鑰 ... 等</li>
+				<li>或是其他的隱私資料（Ex. 未公開的 API 網址 .. 等）</li>
+			</ul>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<h2>Let's take some examples :)</h2>
+		<ul>
+			<li>Delete all file named 'id_rsa' or 'id_dsa'</li>
+			<ul>
+				<li><code>bfg --delete-files id_{dsa,rsa}  my-repo.git</code></li>
+			</ul>
+			<li>Remove all blobs bigger than 50 megabytes</li>
+			<ul>
+				<li><code>bfg --strip-blobs-bigger-than 50M  my-repo.git</code></li>
+			</ul>
+			<li>Replace all passwords listed in a file (prefix lines 'regex:' or 'glob:' if required) with <code>***REMOVED***</code> </li>
+			<ul>
+				<li><code>bfg --replace-text passwords.txt  my-repo.git</code></li>
+			</ul>
+		</ul>
+	</section>
+
+	<section class="slide cat">
+		<h2>我所碰到的那些問題 - 2</h2><br>
+		<h4>我想還原到上個 commit，<br>可是我已經推上去了耶 幫QQ</h4>
+	</section>
+
+	<section class="slide">
+		<h4>
+		<code>Remote branch</code>
+		<ul>
+			<li>b4f39a - Third Commit and pushed <- HEAD</li>
+			<li>04534f - Second Commit</li>
+			<li>4b964a - First Commit</li>
+		</ul>
+
+		<code>Local branch</code>
+		<ul>
+			<li><s>b4f39a - Third Commit and pushed</s></li>
+			<li>04534f - Second Commit ← <code>HEAD</code></li>
+			<li>4b964a - First Commit</li>
+		</ul>
+		</h4>
+	</section>
+
+	<section class="slide talk">
+		<h2>好險我一個機智還記得怎麼 revert commit</h2>
+		<h4><s>遠端的怎麼沒有 revert 阿阿阿</s></h4>
+	</section>
+
+	<section class="slide command">
+		<h2 style="font-size: 36px;">git push -f [remote_name] [branch_name]</h2>
+		<h4 style="color: #f8bbd0; font-weight: bold;">Force push and rewrite commit</h4>
+	</section>
+
+	<section class="slide cat">
+		<h2>我所碰到的那些問題 - 3</h2>
+		<h4>我突然想從某個 Commit 分出<br>一個 branch 還來得及嗎？</h4>
+	</section>
+
+	<section class="slide">
+		<h2>original</h2>
+		<h4>
+		<ul>
+			<li>4b964a - First Commit</li>
+			<li>04534f - Second Commit</li>
+			<li>b4f39a - Third Commit</li>
+			<li>a98787 - Fourth Commit ← <code>master, HEAD</code></li>
+		</ul>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<h2>Step 1. checkout to target</h2>
+		<h4>
+		<ul>
+			<li>4b964a - First Commit</li>
+			<li>04534f - Second Commit ← <code>HEAD</code></li>
+			<li>b4f39a - Third Commit</li>
+			<li>a98787 - Fourth Commit ← <code>master</code></li>
+		</ul>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<h2>Step 2. checkout new branch</h2>
+		<h4>
+		<ul>
+			<li>4b964a - First Commit</li>
+			<li>04534f - Second Commit</li>
+			<ul>
+				<li>1e27cc - new branch ← <code>dev, HEAD</code></li>
+			</ul>
+			<li>b4f39a - Third Commit</li>
+			<li>a98787 - Fourth Commit ← <code>master</code></li>
+		</ul>
+		</h4>
+	</section>
+
+	<section class="slide">
+		<h2>Step 3. Cont. on dev or back to master</h2>
+		<h4>
+		<ul>
+			<li>4b964a - First Commit</li>
+			<li>04534f - Second Commit</li>
+			<ul>
+				<li>1e27cc - new branch ← <code>dev</code></li>
+			</ul>
+			<li>b4f39a - Third Commit</li>
+			<li>a98787 - Fourth Commit ← <code>master, HEAD</code></li>
+		</ul>
+		</h4>
+	</section>
+
+
 	<section class="slide">
 		<h2>Reference</h2>
 		<ul>
@@ -531,6 +659,10 @@ The key fingerprint is:
 			<li><a href="https://speakerdeck.com/crboy/code-smart-dont-code-hard">Code Smart, Don't Code hard - CrBoy</a></li>
 			<li><a href="https://git-scm.com/book/zh-tw">Git Book</a></li>
 		</ul>
+	</section>
+
+	<section class="slide talk">
+		<h2>Slide: https://github.com/aweimeow/git-workshop-slide</h2>
 	</section>
 
 	<!--
