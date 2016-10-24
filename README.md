@@ -1,8 +1,8 @@
-# 高應大資訊研習社 Git 版本控制工作坊簡報 (KUASITC git workshop slide)
+# Git 版本控制工作坊簡報 (KUASITC git workshop slide)
 
 ## About us
 
-[高應大資訊研習社](https://fb.me/KUASITC)
+### [高應大資訊研習社](https://fb.me/KUASITC)
 ![KUASITC](http://i.imgur.com/rRj2kz8.png)
 
 ## 這份 slide 是給 ...
